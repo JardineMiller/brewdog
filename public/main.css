@@ -1,5 +1,11 @@
+* {
+  font-family: Helvetica;
+  font-weight: 300;
+  box-sizing: border-box;
+}
+
 main{
-  width: 300px;
+  width: 80vw;
   margin: 0 auto;
 }
 
@@ -15,3 +21,38 @@ input{
   padding: 5px;
 }
 
+#beers {
+  width: 80vw;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+#beers li {
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+  background: #888;
+  color: #ededed;
+  height: 350px;
+  width: 350px;
+  position: relative;
+}
+
+#beers li:hover .overlay {
+  opacity: .9;
+}
+
+.overlay {
+  font-size: 13px;
+  padding: 15px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #333;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all .3s;
+}
