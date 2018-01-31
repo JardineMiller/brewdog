@@ -33,11 +33,16 @@ input{
   text-align: center;
   padding: 10px;
   margin: 10px;
-  background: #888;
-  color: #ededed;
+  background: #ccc;
+  color: #333;
   height: 350px;
   width: 350px;
   position: relative;
+}
+
+#beers li h3 {
+  font-weight: 400;
+  margin-bottom: 40px;
 }
 
 #beers li:hover .overlay {
@@ -55,4 +60,5 @@ input{
   left: 0;
   opacity: 0;
   transition: all .3s;
+  color: #ededed;
 }

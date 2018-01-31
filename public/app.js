@@ -7,7 +7,9 @@ var appendElements = function(container, elements) {
 var getIngredients = function(array) {
   var ingredients = '';
   for(each of array) {
-    ingredients += each.name + '\n';
+    if(!ingredients.includes(each.name)) {
+      ingredients += each.name + '\n';
+    }
   }
   return ingredients;
 }
@@ -32,16 +34,16 @@ var createOverlay = function(item) {
 
 var addItem = function(list, item) {
   var li = document.createElement('li');
-  var h5 = document.createElement('h5');
+  var h3 = document.createElement('h3');
   var img = document.createElement('img');
   
 
-  h5.innerText = item.name;
+  h3.innerText = item.name;
   img.src = item.image_url;
   img.height = 200;
 
   var ingredientsOverlay = createOverlay(item);
-  var elements = [h5, img, ingredientsOverlay];
+  var elements = [h3, img, ingredientsOverlay];
   appendElements(li, elements);
   list.appendChild(li);
 }
